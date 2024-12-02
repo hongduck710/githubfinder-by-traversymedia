@@ -1,12 +1,12 @@
 import { useState, useContext } from "react";
 import GithubContext from "../../context/github/GithubContext";
-import AltertContext from "../../context/alert/AlertContext";
+import AlertContext from "../../context/alert/AlertContext";
 
 function UserSearch(){
     const [text, setText] = useState("");
 
     const { users, searchUsers, clearUsers } = useContext(GithubContext);
-    const { setAlert } = useContext(AltertContext);
+    const { setAlert } = useContext(AlertContext);
 
     const handleChange = (e) => setText(e.target.value);
     const handleSubmit = (e) => {
