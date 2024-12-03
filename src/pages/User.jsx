@@ -14,6 +14,7 @@ function User(){
     useEffect(() => {
         getUser(params.login);
         getUserRepos(params.login);
+        // eslint-desable-next-line react-hooks/extensive-deps
     }, []);
 
     const {
